@@ -1,6 +1,10 @@
 buildscript {
 	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		maven { url 'https://maven.aliyun.com/repository/spring/'}
+		mavenLocal()
 		maven { url "https://repo.spring.io/plugins-release" }
+		mavenCentral()
 	}
 	dependencies {
 		classpath("io.spring.gradle:propdeps-plugin:0.0.9.RELEASE")
@@ -101,21 +105,21 @@ configure(allprojects) { project ->
 			 "-Xlint:-deprecation", "-Xlint:-unchecked"]
 
 	compileJava {
-		sourceCompatibility = 1.8  // can be switched to 11 for testing
-		targetCompatibility = 1.8
+		sourceCompatibility = 11  // can be switched to 11 for testing
+		targetCompatibility = 11
 		options.encoding = "UTF-8"
 	}
 
 	compileTestJava {
-		sourceCompatibility = 1.8  // can be switched to 11 for testing
-		targetCompatibility = 1.8
+		sourceCompatibility = 11  // can be switched to 11 for testing
+		targetCompatibility = 11
 		options.encoding = "UTF-8"
 		options.compilerArgs += "-parameters"
 	}
 
 	compileKotlin {
 		kotlinOptions {
-			jvmTarget = "1.8"
+			jvmTarget = "11"
 			freeCompilerArgs = ["-Xjsr305=strict"]
 			apiVersion = "1.4"
 			languageVersion = "1.4"
@@ -124,7 +128,7 @@ configure(allprojects) { project ->
 
 	compileTestKotlin {
 		kotlinOptions {
-			jvmTarget = "1.8"
+			jvmTarget = "11"
 			freeCompilerArgs = ["-Xjsr305=strict"]
 		}
 	}
@@ -148,7 +152,11 @@ configure(allprojects) { project ->
 	}
 
 	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		maven { url 'https://maven.aliyun.com/repository/spring/'}
 		maven { url "https://repo.spring.io/libs-release" }
+		mavenLocal()
+		mavenCentral()
 	}
 
 	dependencies {
