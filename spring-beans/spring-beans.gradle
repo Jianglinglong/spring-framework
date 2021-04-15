@@ -19,8 +19,8 @@ sourceSets {
 }
 
 compileGroovy {
-	sourceCompatibility = 1.8
-	targetCompatibility = 1.8
+	sourceCompatibility = 11
+	targetCompatibility = 11
 }
 
 // This module also builds Kotlin code and the compileKotlin task naturally depends on

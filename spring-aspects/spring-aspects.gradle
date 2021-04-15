@@ -17,8 +17,8 @@ compileJava {
 	inputs.files(project.sourceSets.main.allSource + project.sourceSets.main.compileClasspath)
 	outputs.dir outputDir
 
-	sourceCompatibility = 1.8  // fixed even when general compatibility level set to e.g. 10
-	targetCompatibility = 1.8
+	sourceCompatibility = 11  // fixed even when general compatibility level set to e.g. 10
+	targetCompatibility = 11
 
 	doLast{
 		// Assemble runtime classpath from folders and JARs that actually exist
@@ -52,8 +52,8 @@ compileTestJava {
 	inputs.files(project.sourceSets.test.allSource + project.sourceSets.test.compileClasspath)
 	outputs.dir outputDir
 
-	sourceCompatibility = 1.8  // fixed even when general compatibility level set to e.g. 10
-	targetCompatibility = 1.8
+	sourceCompatibility = 11  // fixed even when general compatibility level set to e.g. 10
+	targetCompatibility = 11
 
 	doLast{
 		// Assemble runtime classpath from folders and JARs that actually exist
