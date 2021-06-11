@@ -24,3 +24,9 @@ spring-build/lib/docbook
 /build
 /spring-*
 !/spring-framework-reference
+*.iml
+/*/*.iml
+
+/*/.springBeans
+/*/.classpath
+/*/.project
